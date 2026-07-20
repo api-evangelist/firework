@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.firework.com/firework-for-developers/api/authentication.md
+docs: https://docs.firework.com/firework-for-developers/api/authentication
+well_known: well-known/firework-oauth-authorization-server.json
+summary:
+  types: [oauth2]
+  oauth2_flows: [clientCredentials, authorizationCode]
+  token_endpoint_auth_methods: [none, client_secret_post, client_secret_basic]
+  pkce: S256
+  dynamic_client_registration: true       # RFC 7591 registration_endpoint
+  token_revocation: true                   # RFC 7009 revocation_endpoint
+  base_url: https://api.firework.com
+  api_prefix: /api/v1/
+schemes:
+  - name: OAuth2 Client Credentials
+    type: oauth2
+    flow: clientCredentials
+    token_endpoint: https://api.firework.com/oauth/token
+    note: >-
+      Server-to-server flow documented for the Public API (/api/v1/*). OAuth apps
+      (client_id / client_secret) are registered and scoped to a business by the
+      Firework IS (Internal Systems) team; credentials can only access resources
+      belonging to that business. Not self-service.
+    sources: [docs.firework.com/firework-for-developers/api/authentication]
+  - name: OAuth2 Authorization Code (PKCE)
+    type: oauth2
+    flow: authorizationCode
+    authorization_endpoint: https://api.firework.com/oauth/authorize
+    token_endpoint: https://api.firework.com/oauth/token
+    revocation_endpoint: https://api.firework.com/oauth/revoke
+    registration_endpoint: https://api.firework.com/oauth/register
+    code_challenge_methods: [S256]
+    grant_types: [authorization_code, refresh_token]
+    sources: [well-known/firework-oauth-authorization-server.json]
