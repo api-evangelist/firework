@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.firework.com/firework-for-developers/web/integration-guide/components
+loader:
+  web_sdk: window._fwn
+  docs: https://docs.firework.com/firework-for-developers/web/integration-guide/web-sdk
+families:
+  - family: Web embeddable components
+    platform: web
+    docs: https://docs.firework.com/firework-for-developers/web/integration-guide/components
+    components:
+      - name: Hero Unit
+        description: Full-width unit suitable for livestream events.
+        docs: https://docs.firework.com/firework-for-developers/web/integration-guide/components/hero-unit
+      - name: Carousel / Grid
+        description: Carousel or grid feed of short videos.
+        docs: https://docs.firework.com/firework-for-developers/web/integration-guide/components/carousel-grid
+      - name: Player Deck / Grid
+        description: Player deck / grid layout of video content.
+        docs: https://docs.firework.com/firework-for-developers/web/integration-guide/components/player-deck-grid
+      - name: Storyblock
+        description: Inline embeddable story block player.
+        docs: https://docs.firework.com/firework-for-developers/web/integration-guide/components/storyblock
+      - name: Floating Player (Channel Button)
+        description: Floating / picture-in-picture channel player button.
+        docs: https://docs.firework.com/firework-for-developers/web/integration-guide/components/channel-button
+      - name: Storylink
+        description: Shareable story link surface.
+        docs: https://docs.firework.com/firework-for-developers/web/integration-guide/components/storylink
+  - family: Mobile widgets
+    platform: [android, ios, react-native, flutter]
+    docs: https://docs.firework.com/firework-for-developers/android-sdk/integration-guide/widgets
+    components:
+      - name: Video Feed View
+        description: Scrollable feed of short videos.
+      - name: StoryBlock
+        description: Inline story block widget.
+      - name: Player Deck (Beta)
+        description: Player deck widget.
+      - name: Circle Story
+        description: Circular thumbnail story entry point in a video feed.

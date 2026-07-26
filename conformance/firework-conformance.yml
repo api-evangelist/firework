@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://api.firework.com/.well-known/oauth-authorization-server
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      Publishes RFC 8414 authorization server metadata with authorization_code
+      and refresh_token grants plus a documented client_credentials flow.
+  - id: rfc8414-as-metadata
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server returns 200 with issuer, endpoints, scopes.
+  - id: oauth2-pkce
+    conforms: true
+    evidence: code_challenge_methods_supported = [S256].
+  - id: rfc7591-dynamic-client-registration
+    conforms: true
+    evidence: registration_endpoint = https://api.firework.com/oauth/register.
+  - id: rfc7009-token-revocation
+    conforms: true
+    evidence: revocation_endpoint = https://api.firework.com/oauth/revoke.
+  - id: oidc
+    conforms: false
+    evidence: /.well-known/openid-configuration returns 404; no id_token/userinfo advertised.
+  - id: webhook-hmac-signing
+    conforms: true
+    evidence: Webhooks signed with HMAC-SHA256 via FW-Webhooks-Signature (t=<ms>,v1=<base64>).
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json error format documented.

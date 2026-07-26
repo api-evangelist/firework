@@ -1,24 +1,135 @@
 aid: firework
 name: Firework
-description: 'Firework is a company surfaced as a portfolio company of softbank-vision-fund and added
-  to the API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Firework is a video commerce platform that helps brands and retailers bring the
+  in-store experience and human connection online through shoppable short-form
+  video, livestream shopping, 1:1 video chat, digital showrooms, and an AI shopping
+  agent. Operated by Loop Now Technologies and backed by SoftBank (a $150M Series C
+  led SoftBank's investment), Firework powers 1,500+ global brands and has driven
+  $300M+ in GMV across 2+ trillion video views. For developers it offers a Web SDK,
+  native Android/iOS SDKs, React Native and Flutter plugins, embeddable web
+  components (Hero Unit, Carousel, Player Deck, Storyblock, Floating Player), a
+  server-side REST Public API (https://api.firework.com/api/v1) secured with OAuth 2.0
+  (client credentials and authorization-code + PKCE with dynamic client registration),
+  HMAC-signed webhooks, and turnkey commerce-platform integrations for Shopify,
+  Magento, WooCommerce, Salesforce Commerce Cloud, and BigCommerce.
 url: https://raw.githubusercontent.com/api-evangelist/firework/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - softbank-vision-fund
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-developer-surface
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://firework.com/favicon.ico
 tags:
 - Company
 - Consumer
-apis: []
+- Video Commerce
+- Shoppable Video
+- Livestream Shopping
+- Ecommerce
+- Retail
+- Video
+- SDK
+- Webhooks
+apis:
+- name: Firework Public API
+  description: >-
+    Server-to-server REST API for managing businesses, channels, videos, livestreams,
+    playlists, products, business stores, and insights, plus HMAC-signed webhooks.
+    Secured with OAuth 2.0 (client credentials and authorization-code + PKCE).
+  humanURL: https://docs.firework.com/firework-for-developers/api/authentication
+  baseURL: https://api.firework.com
+  tags:
+  - Video Commerce
+  - Video
+  - Ecommerce
+  properties:
+  - type: Documentation
+    url: https://docs.firework.com/firework-for-developers/api/authentication
+  - type: Authentication
+    url: authentication/firework-authentication.yml
+  - type: OAuthScopes
+    url: scopes/firework-scopes.yml
+  - type: Webhooks
+    url: asyncapi/firework-webhooks.yml
+  - type: DataModel
+    url: data-model/firework-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/firework-domain-security.yml
+- type: DeveloperPortal
+  url: https://docs.firework.com/firework-for-developers
+- type: Documentation
+  url: https://docs.firework.com/firework-for-developers
+- type: APIReference
+  url: https://docs.firework.com/firework-for-developers/api/authentication
+- type: GettingStarted
+  url: https://docs.firework.com/firework-for-developers/readme
+- type: Blog
+  url: https://firework.com/blog
+- type: Pricing
+  url: https://firework.com/pricing
+- type: SignUp
+  url: https://api.firework.com/auth/business_auth/callback
+- type: TermsOfService
+  url: https://firework.com/legal
+- type: PrivacyPolicy
+  url: https://firework.com/legal/privacypolicy
+- type: Support
+  url: https://firework.com/help
+- type: GitHubOrganization
+  url: https://github.com/loopsocial
+- type: StatusPage
+  url: https://firework.statuspage.io
+- type: Authentication
+  url: authentication/firework-authentication.yml
+- type: OAuthScopes
+  url: scopes/firework-scopes.yml
+- type: WellKnown
+  url: well-known/firework-well-known.yml
+- type: Packages
+  url: packages/firework-packages.yml
+- type: SDKs
+  url: packages/firework-packages.yml
+- type: Components
+  url: components/firework-components.yml
+- type: Webhooks
+  url: asyncapi/firework-webhooks.yml
+- type: Conventions
+  url: conventions/firework-conventions.yml
+- type: Conformance
+  url: conformance/firework-conformance.yml
+- type: ChangeLog
+  url: changelog/firework-changelog.yml
+- type: Lifecycle
+  url: lifecycle/firework-lifecycle.yml
+- type: DataModel
+  url: data-model/firework-data-model.yml
+- type: LLMsTxt
+  url: llms/firework-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,17 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.firework.com/firework-for-developers/api/authentication.md
+versioning:
+  scheme: uri-path
+  current: v1
+  path: /api/v1/
+  docs: https://docs.firework.com/firework-for-developers/api/authentication
+status_page: https://firework.statuspage.io
+deprecation:
+  policy_url: null
+  note: No formal deprecation/sunset policy page was found in the public developer docs at capture time.
+webhooks: asyncapi/firework-webhooks.yml
+changelog: changelog/firework-changelog.yml
+notes: >-
+  Public REST API is at v1 (/api/v1/) on https://api.firework.com. A hosted
+  status page is published at firework.statuspage.io (Atlassian Statuspage).

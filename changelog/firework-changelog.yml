@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.firework.com/firework-for-developers/llms.txt
+scheme: semver (per SDK)
+note: >-
+  Firework maintains separate, dated changelogs per client SDK rather than a
+  single API changelog. Recent versions observed from the package registries at
+  capture time; full entry history lives on the linked changelog pages.
+changelogs:
+  - product: React Native SDK
+    current_version: 2.20.3
+    url: https://docs.firework.com/firework-for-developers/react-native-sdk/integration-guide-v2/changelog
+    registry: https://www.npmjs.com/package/react-native-firework-sdk
+  - product: Flutter SDK
+    current_version: 2.28.0
+    url: https://docs.firework.com/firework-for-developers/flutter-sdk/integration-guide-v2/changelog
+    registry: https://pub.dev/packages/fw_flutter_sdk
+  - product: iOS SDK
+    url: https://github.com/loopsocial/firework_ios_sdk/blob/main/CHANGELOG.md
+    docs: https://docs.firework.com/firework-for-developers/ios-sdk/changelog-ios
+  - product: Android SDK
+    url: https://docs.firework.com/firework-for-developers/android-sdk/changelog

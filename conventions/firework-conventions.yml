@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.firework.com/firework-for-developers/api/authentication.md
+docs: https://docs.firework.com/firework-for-developers/api
+base_url: https://api.firework.com
+api_prefix: /api/v1/
+authentication:
+  style: oauth2
+  flows: [clientCredentials, authorizationCode]
+  token_header: "Authorization: Bearer <access_token>"
+  scoping: Tokens are scoped to a single business; resources outside that business are inaccessible.
+  ref: authentication/firework-authentication.yml
+identifiers:
+  scheme: Encoded (obfuscated) resource IDs
+  applies_to: [channel, playlist, video, livestream]
+  docs: https://docs.firework.com/firework-for-developers/additional-resources/encoded-ids
+  note: >-
+    Resources are addressed by encoded IDs; the docs describe how to obtain the
+    encoded IDs of channels, playlists, videos and livestreams for API/embed use.
+uploads:
+  video_upload: >-
+    Multi-path video ingestion — pre-signed S3 upload signatures, multipart
+    upload (initiate/complete), or create-by-URL / S3 key / base64. Async URL
+    imports expose a job-status resource (GET /api/v1/videos/imports/:id).
+webhooks:
+  supported: true
+  ref: asyncapi/firework-webhooks.yml
+  signature_header: FW-Webhooks-Signature (HMAC-SHA256)
+idempotency:
+  supported: false
+  note: >-
+    No documented idempotency-key header for write operations was found in the
+    public API docs as of this capture. (Do not assume idempotency support.)
+error_envelope:
+  note: >-
+    Error format not fully captured; API returns standard HTTP status codes.
+    Webhook delivery treats non-2xx (or timeout) as failure and retries.
+versioning:
+  scheme: uri-path
+  current: v1
+  path: /api/v1/
+cross_links:
+  authentication: authentication/firework-authentication.yml
+  scopes: scopes/firework-scopes.yml
+  webhooks: asyncapi/firework-webhooks.yml
+  lifecycle: lifecycle/firework-lifecycle.yml

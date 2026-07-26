@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.firework.com/firework-for-developers/llms.txt
+packages:
+  - language: dart
+    registry: pub.dev
+    name: fw_flutter_sdk
+    url: https://pub.dev/packages/fw_flutter_sdk
+    install: "flutter pub add fw_flutter_sdk"
+    version: 2.28.0
+    repository: https://github.com/loopsocial/fw_flutter_sdk
+    official: true
+    description: Flutter plugin for the Firework SDK — video feed, shopping, and live stream in Flutter apps.
+  - language: javascript
+    registry: npm
+    name: react-native-firework-sdk
+    url: https://www.npmjs.com/package/react-native-firework-sdk
+    install: "npm install react-native-firework-sdk"
+    version: 2.20.3
+    repository: https://github.com/loopsocial/react-native-firework-sdk
+    official: true
+    description: Firework React Native SDK.
+  - language: swift
+    registry: github
+    name: firework_ios_sdk
+    url: https://github.com/loopsocial/firework_ios_sdk
+    install: "Swift Package Manager / CocoaPods (see docs)"
+    repository: https://github.com/loopsocial/firework_ios_sdk
+    official: true
+    description: Firework iOS SDK (native).
+  - language: kotlin
+    registry: docs
+    name: Firework Android SDK
+    url: https://docs.firework.com/firework-for-developers/android-sdk/integration-guide
+    install: "Gradle dependency (see integration guide)"
+    official: true
+    description: Firework Android SDK (native), distributed via the documented Gradle/Maven coordinates.
+  - language: javascript
+    registry: cdn
+    name: Firework Web SDK (window._fwn)
+    url: https://docs.firework.com/firework-for-developers/web/integration-guide/web-sdk
+    install: "Embed script tag; access programmatic API via window._fwn"
+    official: true
+    description: Browser Web SDK providing programmatic access to Firework widgets/players.
+notes: >-
+  Firework's client libraries are distributed under the loopsocial GitHub org
+  (Firework is operated by Loop Now Technologies). No first-party server-side
+  REST client SDK (Node/Python/etc.) was found published; these are embed/mobile
+  SDKs plus the Web SDK.

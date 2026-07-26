@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.firework.com/firework-for-developers/api/webhooks.md
+docs: https://docs.firework.com/firework-for-developers/api/webhooks
+type: Webhooks
+transport: HTTP POST callbacks (application/json)
+provisioning: >-
+  Not self-service. Endpoints are configured by the Firework IS team; the
+  subscriber supplies a callback URL, desired event types, and business ID and
+  receives an endpoint secret used to verify signatures.
+signature:
+  header: FW-Webhooks-Signature
+  algorithm: HMAC-SHA256
+  encoding: base64
+  format: "t=<unix_ms>,v1=<base64 hmac>"
+  signed_payload: "{t}.{raw_request_body}"
+delivery:
+  method: POST
+  content_type: application/json
+  timeout_seconds: 30
+  success_status_codes: [200, 202, 204]
+  retry:
+    max_attempts: 6
+    backoff:
+      - attempts: "1-3"
+        interval: 1 hour
+      - attempts: "4-6"
+        interval: 24 hours
+events:
+  - type: video_created
+    description: Video created — transcoding complete or failed.
+  - type: video_updated
+    description: Video metadata or state changed after creation.
+  - type: video_import_failed
+    description: Async URL import failed (download error, validation error).
+notes: >-
+  Only video-related events are documented on the public webhooks page;
+  additional event types (e.g. livestream) may be documented separately.

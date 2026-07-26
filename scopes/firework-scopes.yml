@@ -1,0 +1,50 @@
+generated: '2026-07-19'
+method: searched
+source: well-known/firework-oauth-authorization-server.json
+docs: https://docs.firework.com/firework-for-developers/api/authentication
+schemes:
+  - name: OAuth2
+    source: well-known/firework-oauth-authorization-server.json
+    flows:
+      - flow: clientCredentials
+        tokenUrl: https://api.firework.com/oauth/token
+      - flow: authorizationCode
+        authorizationUrl: https://api.firework.com/oauth/authorize
+        tokenUrl: https://api.firework.com/oauth/token
+scopes:
+  - scope: businesses:read
+    description: List businesses the token can act on.
+    flows: [clientCredentials, authorizationCode]
+  - scope: channels:read
+    description: List channels.
+    flows: [clientCredentials, authorizationCode]
+  - scope: channels:write
+    description: Update a channel's metadata.
+    flows: [clientCredentials, authorizationCode]
+  - scope: insights:read
+    description: Read analytics / insights data.
+    flows: [clientCredentials, authorizationCode]
+  - scope: livestreams:read
+    description: Read livestream resources.
+    flows: [clientCredentials, authorizationCode]
+  - scope: livestreams:write
+    description: Create and manage livestream resources.
+    flows: [clientCredentials, authorizationCode]
+  - scope: playlists:read
+    description: Read playlists.
+    flows: [clientCredentials, authorizationCode]
+  - scope: playlists:write
+    description: Create and manage playlists.
+    flows: [clientCredentials, authorizationCode]
+  - scope: products:read
+    description: List or search products and business stores.
+    flows: [clientCredentials, authorizationCode]
+  - scope: products:write
+    description: Create and manage products.
+    flows: [clientCredentials, authorizationCode]
+  - scope: videos:read
+    description: List videos, read video details, and check async import status.
+    flows: [clientCredentials, authorizationCode]
+  - scope: videos:write
+    description: Upload, create, update, delete, publish, archive videos and manage subtitles/posters.
+    flows: [clientCredentials, authorizationCode]

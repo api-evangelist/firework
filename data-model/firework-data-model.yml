@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: derived
+source: https://docs.firework.com/firework-for-developers/api
+note: >-
+  Derived from the documented Public API resource surface (no OpenAPI published).
+  Relationships inferred from documented endpoint nesting and scope groupings.
+entities:
+  - name: Business
+    scope: businesses:read
+    endpoints: [GET /api/v1/businesses]
+  - name: Channel
+    scopes: [channels:read, channels:write]
+    endpoints: [GET /api/v1/channels, PATCH /api/v1/channels/:id]
+  - name: Video
+    scopes: [videos:read, videos:write]
+    endpoints: [GET /api/v1/videos, GET /api/v1/videos/:id, POST /api/v1/videos, PATCH /api/v1/videos/:id, DELETE /api/v1/videos/:id]
+  - name: Livestream
+    scopes: [livestreams:read, livestreams:write]
+  - name: Playlist
+    scopes: [playlists:read, playlists:write]
+  - name: Product
+    scopes: [products:read, products:write]
+    endpoints: [GET /api/v1/products]
+  - name: BusinessStore
+    scope: products:read
+    endpoints: [GET /api/v1/business_stores]
+  - name: Insights
+    scope: insights:read
+relationships:
+  - from: Business
+    type: has_many
+    to: Channel
+  - from: Channel
+    type: has_many
+    to: Video
+    via: channel
+  - from: Playlist
+    type: has_many
+    to: Video
+  - from: Business
+    type: has_many
+    to: BusinessStore
+  - from: BusinessStore
+    type: has_many
+    to: Product
+  - from: Video
+    type: has_many
+    to: Product
+    via: product hydration / shoppable products
