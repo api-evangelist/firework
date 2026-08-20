@@ -42,6 +42,17 @@ tags:
 - Video Commerce
 - Shoppable Video
 - Livestream Shopping
+- E-Commerce
+- Retail
+- Video
+- SDK
+- Webhook
+tags_raw:
+- Company
+- Consumer
+- Video Commerce
+- Shoppable Video
+- Livestream Shopping
 - Ecommerce
 - Retail
 - Video
@@ -56,6 +67,10 @@ apis:
   humanURL: https://docs.firework.com/firework-for-developers/api/authentication
   baseURL: https://api.firework.com
   tags:
+  - Video Commerce
+  - Video
+  - E-Commerce
+  tags_raw:
   - Video Commerce
   - Video
   - Ecommerce
