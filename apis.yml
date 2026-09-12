@@ -102,6 +102,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Website
+  url: https://www.firework.com/
 - type: DomainSecurity
   url: security/firework-domain-security.yml
 - type: DeveloperPortal
