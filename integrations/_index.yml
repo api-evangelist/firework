@@ -32,3 +32,16 @@
     detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
+- slug: firework-salesforce-commerce-cloud-own
+  label: Salesforce Commerce Cloud (own)
+  partner: salesforce-commerce-cloud
+  partner_name: Salesforce Commerce Cloud (own)
+  category: eCommerce, marketing, websites
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000HKXHsUAP
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
