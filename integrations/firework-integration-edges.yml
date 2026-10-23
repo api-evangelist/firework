@@ -13,6 +13,9 @@ checked:
 - https://zapier.com/apps/firework/integrations
 - salesforce-commerce-cloud/integrations/salesforce-commerce-cloud-integration-edges.yml
 - adobe-commerce/integrations/adobe-commerce-integration-edges.yml
+- https://hex.pm/api
+- https://packagist.org/packages
+- https://pub.dev/api
 summary: null
 marketplace_apps: []
 edges:
@@ -79,4 +82,34 @@ edges:
   detected: '2026-10-22'
   detected_by: mirror-platform-listings.py
   category: Adobe Commerce Marketplace extension
+- partner_name: pub.dev
+  partner: pub-dev
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Dart/Flutter)
+  evidence: https://pub.dev/packages/fw_flutter_sdk
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: pub.dev (public registry JSON)
+    spec_file: null
+    language: Dart/Flutter
+    packages:
+    - name: fw_flutter_sdk
+      version: 2.31.1
+      released: '2026-09-30'
+      released_field: published
+      lapsed: false
+      page: https://pub.dev/packages/fw_flutter_sdk
+      repo_leg: not required (verified publisher)
+      publisher_leg: verified-publisher:firework.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-php-dart-elixir-package-registries.py
+    detected: '2026-10-22'
+  detected_by: sweep-php-dart-elixir-package-registries.py
+  first_seen: '2026-10-22'
 templates: []
